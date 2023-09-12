@@ -1,17 +1,24 @@
 [
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "objectID": "posts/02wk-003-타이타닉, 첫 제출.out.html",
+    "href": "posts/02wk-003-타이타닉, 첫 제출.out.html",
+    "title": "02wk-003: 타이타닉, 첫 제출",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "최규빈\n2023-09-12"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "mpmp",
-    "section": "",
-    "text": "Post With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nSep 12, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nSep 9, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "objectID": "posts/02wk-003-타이타닉, 첫 제출.out.html#a.-test-답을-모름-제출해야-알-수-있음",
+    "href": "posts/02wk-003-타이타닉, 첫 제출.out.html#a.-test-답을-모름-제출해야-알-수-있음",
+    "title": "02wk-003: 타이타닉, 첫 제출",
+    "section": "A. test – 답을 모름, 제출해야 알 수 있음",
+    "text": "A. test – 답을 모름, 제출해야 알 수 있음\n- 제출결과는 리더보드에서 확인할 수 있음."
+  },
+  {
+    "objectID": "posts/02wk-003-타이타닉, 첫 제출.out.html#b.-train-스스로-풀어보고-채점할-수-있음",
+    "href": "posts/02wk-003-타이타닉, 첫 제출.out.html#b.-train-스스로-풀어보고-채점할-수-있음",
+    "title": "02wk-003: 타이타닉, 첫 제출",
+    "section": "B. train – 스스로 풀어보고 채점할 수 있음",
+    "text": "B. train – 스스로 풀어보고 채점할 수 있음\n- 캐글에서 code \\(\\to\\) New Notebook 클릭\n# This Python 3 environment comes with many helpful analytics libraries installed\n# It is defined by the kaggle/python Docker image: https://github.com/kaggle/docker-python\n# For example, here's several helpful packages to load\n\nimport numpy as np # linear algebra\nimport pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)\n\n# Input data files are available in the read-only \"../input/\" directory\n# For example, running this (by clicking run or pressing Shift+Enter) will list all files under the input directory\n\nimport os\nfor dirname, _, filenames in os.walk('/kaggle/input'):\n    for filename in filenames:\n        print(os.path.join(dirname, filename))\n\n# You can write up to 20GB to the current directory (/kaggle/working/) that gets preserved as output when you create a version using \"Save & Run All\" \n# You can also write temporary files to /kaggle/temp/, but they won't be saved outside of the current session\n/kaggle/input/titanic/train.csv\n/kaggle/input/titanic/test.csv\n/kaggle/input/titanic/gender_submission.csv\n\ntr=pd.read_csv(\"/kaggle/input/titanic/train.csv\")\ntst=pd.read_csv(\"/kaggle/input/titanic/test.csv\")\n\n# 예비학습 – accuracy의 계산\n\nimport pandas as pd \n\n\ndf = pd.DataFrame({'Surv':[1,0,1,1,0],'Sex':['f','m','f','m','m']})\n\n- Surv 열의 선택\n\ndf.Surv\n\n- Sex 열의 선택\n\ndf.Sex\n\n- Sex == f이면 생존(1), 그렇지 않으면 사망(0)이라고 예측\n\n(df.Sex == 'f')*1\n\n- 결과를 정리하면 아래와 같음\n\npd.DataFrame({'real': df.Surv, 'estimate': (df.Sex == 'f')*1})\n\n- accuracy를 손으로 계산하면 \\(\\frac{4}{5}=0.8\\).\n- 컴퓨터로 accuracy를 계산한다면\n\n(df.Surv == (df.Sex == 'f')*1).sum()/5 # 방법1\n\n\n(df.Surv == (df.Sex == 'f')*1).mean() # 방법2\n\n#\n- 실제자료의 accuracy를 구해보자.\n\n(tr.Survived == (tr.Sex == 'female')).mean()"
   },
   {
     "objectID": "about.html",
@@ -21,10 +28,10 @@
     "text": "About this blog"
   },
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "mpmp",
     "section": "",
-    "text": "This is a post with executable code."
+    "text": "02wk-003: 타이타닉, 첫 제출\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
   }
 ]
